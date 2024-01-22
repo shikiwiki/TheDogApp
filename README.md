@@ -8,10 +8,12 @@ You also have an opportunity to save concrete ones to your own list by clicking 
 
 ..................................................
 
-App Structure:
+Application Structure:
 
- 1. Main Fragment - a fragment with a list of dogs. Initially opened. Represented right after the Splash Screen. Uses RecyclerView. Contains 'liked' button. Each item is clickable and has its image, name and 'like' button. Clicking 'like' button means saving particular dog into the local database. Clicking a dog already been clicked means deleting that dog from the local database;
- 2. Liked Dogs Fragment - a fragment with a list of dogs been liked, accessible from the main fragment by clicking 'liked' button. Contains 'back' button meaning navigation back to the Main Fragment. All liked dogs are saved into the local database;
+ 1. Main Fragment - a fragment with a list of dogs. Initially opened right after performing the Splash Screen. Uses RecyclerView and pull-to-refresh function. Items are being loaded from the Internet. Skeletons are shown while loading. Contains 'liked' floating button meaning navigation to Liked Dogs Fragment. Each item is clickable and has its image, name and 'like' button. Clicking a dog navigates you to the Detail Fragment. Clicking 'like' button means saving particular dog into the local database. Clicking the 'like' button already been clicked means deleting that dog from the local database;
+ 
+ 2. Liked Dogs Fragment - a fragment with a list of dogs been liked, accessible from the main fragment by clicking 'liked' button. Contains 'back' button meaning navigation back to the Main Fragment. All liked dogs are saved into the local database and accordingly being loaded from the database while the fragment is loading. Clicking a dog navigates you to the Detail Fragment;
+ 
  3. Details Fragment - a fragment with detailed information about particular dog. Works offline. Being opened after clicking a dog from the Main fragment or from the Liked Dogs Fragment. Contains a name, an image and a description of a chosen dog. Contains 'back' button meaning navigation back to the Main Fragment or Liked Dogs Fragment - depends on where this Details Fragment was opened from.
 
 ..................................................
