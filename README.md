@@ -8,6 +8,14 @@ You also have an opportunity to save concrete ones to your own list by clicking 
 
 ..................................................
 
+App Structure:
+
+ 1. Main Fragment - a fragment with a list of dogs. Initially opened. Represented right after the Splash Screen. Uses RecyclerView. Contains 'liked' button. Each item is clickable and has its image, name and 'like' button. Clicking 'like' button means saving particular dog into the local database. Clicking a dog already been clicked means deleting that dog from the local database;
+ 2. Liked Dogs Fragment - a fragment with a list of dogs been liked, accessible from the main fragment by clicking 'liked' button. Contains 'back' button meaning navigation back to the Main Fragment. All liked dogs are saved into the local database;
+ 3. Details Fragment - a fragment with detailed information about particular dog. Works offline. Being opened after clicking a dog from the Main fragment or from the Liked Dogs Fragment. Contains a name, an image and a description of a chosen dog. Contains 'back' button meaning navigation back to the Main Fragment or Liked Dogs Fragment - depends on where this Details Fragment was opened from.
+
+..................................................
+
 Technologies being used:
 
   * Databases:
@@ -25,6 +33,7 @@ Technologies being used:
     Navigation,
     JUnit,
     SplashScreen API,
+    SwipeRefreshLayout,
     Butterknife/Dagger2?,(dependency injector)
     RxJava/RxJava2/RxAndroid/RxKotlin?,(reliant on ReactiveStreams, a standard for asynchronous stream processing with non-blocking backpressure)
     FlexboxLayout?,(similar capabilities to the CSS Flexible Box Layout Module)
