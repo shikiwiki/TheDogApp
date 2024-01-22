@@ -24,6 +24,7 @@ Technologies being used:
     AndroidX,
     Navigation,
     JUnit,
+    SplashScreen API,
     Butterknife/Dagger2?,(dependency injector)
     RxJava/RxJava2/RxAndroid/RxKotlin?,(reliant on ReactiveStreams, a standard for asynchronous stream processing with non-blocking backpressure)
     FlexboxLayout?,(similar capabilities to the CSS Flexible Box Layout Module)
