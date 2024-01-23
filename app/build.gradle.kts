@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+//    id("com.google.dagger.hilt.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -50,4 +52,15 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+//    Dagger
+    implementation(libs.hilt.android)
+    implementation(libs.androidx.hilt.navigation)
+    kapt(libs.hilt.compiler)
+    kapt(libs.androidx.hilt.compiler)
+
+//    Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+
 }
