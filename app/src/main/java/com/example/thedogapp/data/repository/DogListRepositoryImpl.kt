@@ -11,7 +11,7 @@ import javax.inject.Inject
 @HiltViewModel
 class DogListRepositoryImpl @Inject constructor(
     private val dogApi: DogApi,
-    private val dogDatabase: DogDatabase
+//    private val dogDatabase: DogDatabase
 ) :
     DogListRepository {
     override suspend fun getDogList(): List<Dog> {

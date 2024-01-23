@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-//    id("com.google.dagger.hilt.android")
+    id("com.google.dagger.hilt.android")
     id("kotlin-kapt")
 }
 
@@ -62,5 +62,9 @@ dependencies {
 //    Retrofit
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
+
+//    Navigation
+    runtimeOnly(libs.navigation.fragment.ktx)
+    runtimeOnly(libs.androidx.navigation.ui.ktx)
 
 }
