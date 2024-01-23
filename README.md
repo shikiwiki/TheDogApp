@@ -36,7 +36,7 @@ Technologies being used:
     JUnit,
     SplashScreen,
     SwipeRefreshLayout,
-    Butterknife/Dagger2?,(dependency injector)
+    Dagger2,
     RxJava/RxJava2/RxAndroid/RxKotlin?,(reliant on ReactiveStreams, a standard for asynchronous stream processing with non-blocking backpressure)
     FlexboxLayout?,(similar capabilities to the CSS Flexible Box Layout Module)
     klaxon?.(to parse JSON into Kotlin)
