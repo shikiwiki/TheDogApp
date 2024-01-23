@@ -23,7 +23,7 @@ Technologies being used:
   * Databases:
     SQLite;
 
-  * Programming languages:
+  * Languages:
     Kotlin,
     XML;
 
