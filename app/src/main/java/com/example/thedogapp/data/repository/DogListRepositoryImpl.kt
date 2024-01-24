@@ -5,15 +5,15 @@ import com.example.thedogapp.data.mapper.toDog
 import com.example.thedogapp.data.remote.DogApi
 import com.example.thedogapp.domain.model.Dog
 import com.example.thedogapp.domain.repository.DogListRepository
-import dagger.hilt.android.lifecycle.HiltViewModel
-import javax.inject.Inject
+//import dagger.hilt.android.lifecycle.HiltViewModel
+//import javax.inject.Inject
 
-@HiltViewModel
-class DogListRepositoryImpl @Inject constructor(
+class DogListRepositoryImpl
+//@Inject
+constructor(
     private val dogApi: DogApi,
 //    private val dogDatabase: DogDatabase
-) :
-    DogListRepository {
+) : DogListRepository {
     override suspend fun getDogList(): List<Dog> {
         return dogApi.getData().map { it.toDog() }
     }
