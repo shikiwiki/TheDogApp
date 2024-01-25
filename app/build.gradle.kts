@@ -3,6 +3,9 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("com.google.dagger.hilt.android")
     id("kotlin-kapt")
+    id("kotlin-parcelize")
+    id("com.google.devtools.ksp")
+    id("androidx.navigation.safeargs")
 }
 
 android {
@@ -59,9 +62,9 @@ dependencies {
     implementation(libs.androidx.lifecycle.livedata.ktx)
 
 //    Room
-//    implementation(libs.androidx.room.runtime)
-//    ksp(libs.room.compiler)
-//    implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.room.runtime)
+    ksp(libs.room.compiler)
+    implementation(libs.androidx.room.ktx)
 
 //    Coroutines
     implementation (libs.kotlinx.coroutines.core)
@@ -88,6 +91,9 @@ dependencies {
     implementation (libs.logging.interceptor)
 
 //    Navigation
-    runtimeOnly(libs.navigation.fragment.ktx)
-    runtimeOnly(libs.androidx.navigation.ui.ktx)
+    implementation(libs.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+
+//    Glide
+    implementation(libs.glide)
 }
