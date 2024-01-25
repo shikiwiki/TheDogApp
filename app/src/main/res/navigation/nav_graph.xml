@@ -3,11 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainActivity">
+    app:startDestination="@id/detailsFragment2">
 
+    <fragment
+        android:id="@+id/detailsFragment2"
+        android:name="com.example.thedogapp.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" />
+    <fragment
+        android:id="@+id/likedDogsFragment2"
+        android:name="com.example.thedogapp.LikedDogsFragment"
+        android:label="fragment_liked_dogs"
+        tools:layout="@layout/fragment_liked_dogs" />
     <activity
-        android:id="@+id/mainActivity"
+        android:id="@+id/mainActivity2"
         android:name="com.example.thedogapp.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
+        android:label="fragment_item"
+        tools:layout="@layout/fragment_item" />
 </navigation>
