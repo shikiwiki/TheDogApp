@@ -37,9 +37,9 @@ Technologies being used:
     SplashScreen,
     SwipeRefreshLayout,
     Dagger2,
+    JsonToKotlinClass,
     RxJava/RxJava2/RxAndroid/RxKotlin?,(reliant on ReactiveStreams, a standard for asynchronous stream processing with non-blocking backpressure)
     FlexboxLayout?,(similar capabilities to the CSS Flexible Box Layout Module)
-    klaxon?.(to parse JSON into Kotlin)
 
 ..................................................
 
