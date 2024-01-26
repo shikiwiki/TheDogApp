@@ -3,9 +3,6 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("com.google.dagger.hilt.android")
     id("kotlin-kapt")
-    id("kotlin-parcelize")
-    id("com.google.devtools.ksp")
-    id("androidx.navigation.safeargs")
 }
 
 android {
@@ -52,27 +49,8 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.legacy.support.v4)
 
-//    Architecture Components
-    implementation(libs.androidx.lifecycle.viewmodel.ktx)
-
 //    RecyclerView
     implementation(libs.androidx.recyclerview)
-
-    // LiveData
-    implementation(libs.androidx.lifecycle.livedata.ktx)
-
-//    Room
-    implementation(libs.androidx.room.runtime)
-    ksp(libs.room.compiler)
-    implementation(libs.androidx.room.ktx)
-
-//    Coroutines
-    implementation (libs.kotlinx.coroutines.core)
-    implementation (libs.kotlinx.coroutines.android)
-
-//    Coroutine Lifecycle Scopes
-    implementation (libs.androidx.lifecycle.viewmodel.ktx)
-    implementation (libs.androidx.lifecycle.runtime.ktx)
 
 //    JUnit
     testImplementation(libs.junit)
@@ -88,12 +66,10 @@ dependencies {
 //    Retrofit
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
-    implementation (libs.logging.interceptor)
+    implementation(libs.logging.interceptor)
 
 //    Navigation
     implementation(libs.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
 
-//    Glide
-    implementation(libs.glide)
 }

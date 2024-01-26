@@ -1,4 +1,4 @@
-package com.example.thedogapp.presentation
+package com.example.thedogapp
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

@@ -14,8 +14,7 @@ import retrofit2.Retrofit
 //@InstallIn(SingletonComponent::class)
 object AppModule {
 
-//    @Provides
-//    @Singleton
+//    @Provides @Singleton
     fun provideApi(): DogApi {
         return Retrofit.Builder()
             .baseUrl("https://api.thedogapi.com/")
@@ -23,8 +22,7 @@ object AppModule {
             .create(DogApi::class.java)
     }
 
-//    @Provides
-//    @Singleton
+//    @Provides @Singleton
     fun provideRepository(api: DogApi): DogListRepository {
         return DogListRepositoryImpl(api)
     }
