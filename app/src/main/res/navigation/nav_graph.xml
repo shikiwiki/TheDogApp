@@ -3,11 +3,45 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainActivity">
+    app:startDestination="@id/dogsFragment">
 
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.example.thedogapp.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.thedogapp.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="@string/dog"
+            app:argType="com.example.thedogapp.domain.model.Dog"/>
+        <action
+            android:id="@+id/action_detailsFragment_to_dogsFragment"
+            app:destination="@id/dogsFragment" />
+        <action
+            android:id="@+id/action_detailsFragment_to_likedDogsFragment"
+            app:destination="@id/likedDogsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dogsFragment"
+        android:name="com.example.thedogapp.DogsFragment"
+        android:label="fragment_dogs"
+        tools:layout="@layout/fragment_dogs">
+        <action
+            android:id="@+id/action_dogsFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_dogsFragment_to_likedDogsFragment"
+            app:destination="@id/likedDogsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/likedDogsFragment"
+        android:name="com.example.thedogapp.LikedDogsFragment"
+        android:label="fragment_liked_dogs"
+        tools:layout="@layout/fragment_liked_dogs">
+        <action
+            android:id="@+id/action_likedDogsFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+
 </navigation>

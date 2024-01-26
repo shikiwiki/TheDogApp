@@ -48,7 +48,11 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.legacy.support.v4)
+
+//    RecyclerView
     implementation(libs.androidx.recyclerview)
+
+//    JUnit
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -62,9 +66,10 @@ dependencies {
 //    Retrofit
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
+    implementation(libs.logging.interceptor)
 
 //    Navigation
-    runtimeOnly(libs.navigation.fragment.ktx)
-    runtimeOnly(libs.androidx.navigation.ui.ktx)
+    implementation(libs.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
 
 }
